@@ -1,0 +1,130 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    background-image: url(background1.jpeg);
+    font-family: Arial, sans-serif;
+  }
+  
+  /* Navbar styles */
+  .navbar {
+    background-color: #a13232;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    gap: 50px; /* Adjust the gap as needed */
+  }
+  
+  .nav-icon {
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    font-size: 16px;
+  }
+  
+  /* General styles */
+  h1 {
+    color: #333;
+  }
+  
+  /* Align the h3 text to the left corner */
+  .navbar-title {
+    margin-right: auto;
+    color: #fff;
+    font-size: 24px;
+  }
+  
+  /* Adjustments for mobile application */
+  @media only screen and (max-width: 600px) {
+    .navbar {
+      flex-direction: column;
+      padding: 10px 0;
+    }
+  
+    .nav-icon {
+      margin: 10px 0;
+    }
+  
+    .navbar .nav-links {
+      display: none; /* Hide the nav links by default on mobile */
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+    }
+  
+    .navbar .nav-links a {
+      display: block;
+      text-align: center;
+    }
+  
+    .navbar.active .nav-links {
+      display: flex; /* Show the nav links when the navbar is active */
+    }
+  
+    .navbar .menu-icon {
+      display: flex; /* Show the menu icon by default on mobile */
+    }
+  
+    .navbar.active .menu-icon {
+      display: none; /* Hide the menu icon when the navbar is active */
+    }
+  }
+  /* ... previous CSS styles ... */
+  
+  
+  
+  /* Styles for the notification badge */
+  .notification-badge {
+    background-color: red; /* Set the background color for the badge */
+    color: white; /* Set the text color for the badge */
+    border-radius: 50%; /* Make the badge circular */
+    padding: 4px 8px; /* Adjust the padding to control the size of the badge */
+    position: absolute; /* Position the badge */
+    top: 5px; /* Adjust the top position to align the badge with the icon */
+    right: 10px; /* Adjust the right position to align the badge with the icon */
+  }
+  
+
+  .container {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    background-color: #f9f9f9;
+}
+
+.container h2 {
+    text-align: center;
+    color: #333;
+}
+
+.notification-text {
+    color: white;
+    background-color: #4CAF50; /* Green color */
+    padding: 10px;
+    text-align: center;
+    margin: 10px 0;
+    border-radius: 6px;
+}
+
+.notification-text:before {
+    content: "The user <?php echo $userEmail; ?> has accepted the following books from the library: <?php echo implode(', ', $bookIds); ?>. Please come to the library to get and read it. Enjoy!";
+    display: block;
+}
+
+.echo-messages {
+    color: white; /* Add this line to make the echoed messages white */
+    display: inline-block;
+    margin: 0;
+}
+
+ul {
+    margin: 10px;
+    padding: 0;
+    list-style-type: none;
+}
+
+li {
+    margin: 5px 0;
+}

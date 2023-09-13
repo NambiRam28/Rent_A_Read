@@ -1,0 +1,155 @@
+/* pass.css */
+
+/* Body background */
+body {
+    background-image: url("background1.jpeg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #fff; /* Set the default text color to white */
+}
+
+  /* Navbar styles */
+  .navbar {
+    background-color: #a13232;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    gap: 50px; /* Adjust the gap as needed */
+  }
+  
+  .navbar-title {
+    color: #fff;
+    display: flex;
+    align-items: center;
+    font-size: 24px;
+  }
+  
+  .navbar-title i {
+    margin-right: 10px; /* Adjust the spacing between the icon and text */
+  }
+  
+  .nav-icon {
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    font-size: 16px;
+  }
+  
+  
+  /* General styles */
+  h1 {
+    color: #ffffff;
+  }
+  
+  /* Align the h3 text to the left corner */
+  .navbar-title {
+    margin-right: auto;
+    color: #fff;
+    font-size: 24px;
+  }
+  
+  /* Adjustments for mobile application */
+  @media only screen and (max-width: 600px) {
+    .navbar {
+      flex-direction: column;
+      padding: 10px 0;
+    }
+  
+    .nav-icon {
+      margin: 10px 0;
+    }
+  
+    .navbar .nav-links {
+      display: none; /* Hide the nav links by default on mobile */
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+    }
+  
+    .navbar .nav-links a {
+      display: block;
+      text-align: center;
+    }
+  
+    .navbar.active .nav-links {
+      display: flex; /* Show the nav links when the navbar is active */
+    }
+  
+    .navbar .menu-icon {
+      display: flex; /* Show the menu icon by default on mobile */
+    }
+  
+    .navbar.active .menu-icon {
+      display: none; /* Hide the menu icon when the navbar is active */
+    }
+  }
+  
+  
+
+/* Form container styles */
+form {
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #a13232;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Label styles */
+label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+/* Input styles */
+input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Submit button styles */
+input[type="submit"] {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #444;
+}
+
+/* Link styles */
+a {
+    color: #fff;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Success and error message styles */
+.message {
+    color: #fff;
+    background-color: #4CAF50;
+    padding: 10px;
+    border-radius: 5px;
+    /* margin-bottom: 10px; */
+}
+
+.error {
+    background-color: #f44336;
+}
